@@ -1,0 +1,80 @@
+// Create a survey form that included personal details, educational qualifications, address, and a resume attachment.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+    <style>
+        body {
+            background-color: pink;
+            text-align: center;
+        }
+        .form-row {
+            margin: 10px 0;   
+        }
+        h2 {
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h2>Personal Details</h2>
+<form>
+    <div class="form-row">
+        <label>Name:</label>
+        <input type="text">
+    </div>
+    <div class="form-row">
+        <label>Password:</label>
+        <input type="password">
+    </div>
+    <div class="form-row">
+        <label>E-mail id:</label>
+        <input type="email">
+    </div>
+    <div class="form-row">
+        <label>Gender:</label>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+    </div>
+    <div class="form-row">
+        <label>Contact#:</label>
+        <input type="number" min="1" max="9">
+    </div>
+    <h2>Educational Qualification</h2>
+    <div class="form-row">
+        <label>Degree:</label>
+        <select>
+            <option>-- Select Group --</option>
+            <option>BE</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label>Engineering:</label>
+        <select>
+            <option>-- Select Group --</option>
+            <option>CSE</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label>Hobbies:</label>
+        <input type="checkbox"> Playing chess
+        <input type="checkbox"> Reading Books
+    </div>
+    <h2>Address</h2>
+    <div class="form-row" style="text-align:center;">
+        <textarea></textarea>
+    </div>
+    <div class="form-row">
+        <label>Attach Resume:</label>
+        <input type="file">
+    </div>
+    <div class="form-row">
+        <button type="submit">SUBMIT</button>
+        <button type="reset">RESET</button>
+        <button>Click this button</button>
+    </div>
+</form>
+</body>
+</html>
