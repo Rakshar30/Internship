@@ -1,0 +1,84 @@
+//CSS Basics, Types And Selectors
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="day3taskcss6.css">
+    <!--internal css-->
+    <style>
+        p{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <!--inline css-->
+    <h1 style="color: rgb(198, 10, 255);">Heading 1</h1>
+    <p>This is a Paragraph tag 1</p>
+    <p>This is another paragraph tag 2</p>
+    <button type="submit">Submit</button>
+</body>
+</html>
+/*external css*/
+button{
+    border: 2px solid black;
+    color: brown;
+}
+
+// Applying Element Selector, Class Selector, ID Selector separately
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="day3taskcss6.css">
+    <!--internal css-->
+    <style>
+        p{
+            color: brown;
+        }
+        #demo{
+            border: 5px solid rgb(43, 226, 80);
+        }
+        .one{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!--inline css-->
+    <h1 style="color: rgb(198, 10, 255);">Heading 1</h1>
+    <p class="one">This is a Paragraph tag 1</p>
+    <p id="demo">This is another paragraph tag 2</p>
+    <button type="submit">Submit</button>
+</body>
+</html>
+
+// Applying Element, Class, ID Selector to the same paragraph
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="day3taskcss6.css">
+    <!--internal css-->
+    <style>
+        p,#demo,.one{
+            background-color: brown;
+        }  
+    </style>
+</head>
+<body>
+    <!--inline css-->
+    <h1 style="color: rgb(198, 10, 255);">Heading 1</h1>
+    <p class="one" id="demo">This is a Paragraph tag 1</p>
+    <p>This is another paragraph tag 2</p>
+    <button type="submit">Submit</button>
+</body>
+</html>
+
+
