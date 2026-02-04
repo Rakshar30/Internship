@@ -1,0 +1,94 @@
+// Understand Background Properties,  Borders, Margin, and Padding.
+// 1.Background & Opacity
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="day3taskcss6.css">
+    <style>
+        div{
+            background-image: url(image.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <p>This is a Paragraph tag 1</p>
+    <p>This is another paragraph tag 2</p>
+    <div>This is Div 1</div>
+    <button type="submit">Submit</button>
+</body>
+</html>
+
+// 2.Borders
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            border-style: solid;
+            border-color: blue;
+            border-top: 5px solid blue;
+            border-right: 6px solid green;
+            border-bottom: 3px solid greenyellow;
+            border-left: 2px solid palevioletred;
+            border-radius: 40px;
+        }
+        .two{
+            border-style: dashed;
+            border-color:gold;
+        }
+        .three{
+            border-style: dotted;
+            border-color:teal;
+        }
+        .four{
+            border-style: double;
+            border-color:tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">This is Div 1</div>
+    <br>
+    <div class="two">This is Div 2</div>
+    <br>
+    <div class="three">This is Div 3</div>
+    <br>
+    <div class="four">This is Div 4</div>
+</body>
+</html>
+
+// 3.Margin & Padding
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            margin-top: 10px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            margin-left: 40px;
+            padding: 100px;
+            border:10px double black;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">This is Div 1</div>
+    <br>
+    <div class="two">This is Div 2</div>
+</body>
+</html>
