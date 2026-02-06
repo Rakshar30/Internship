@@ -1,0 +1,189 @@
+// Creating a login and register form using HTML and CSS
+// 1.Login Form
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: antiquewhite;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        form {
+            width: 350px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+        label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 5px;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+        input[type=text],
+        input[type=email],
+        input[type=password] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        input:focus {
+            background-color: lightskyblue;
+            outline: none;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 30px;
+            background: pink;
+            border-radius: 20px;
+            border: 1px solid black;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        button:hover {
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="day5taskloginsuccessful.html">
+            <h2>LOGIN PAGE</h2>
+            <label>User Name:</label>
+            <input type="text" placeholder="Enter your name" required>
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email" required>
+            <label>Password:</label>
+            <input type="password" placeholder="Enter your password" required>
+          <button type="submit">Login</button>
+            <p>Please register <a href="day5taskregister.html">here</a> if you dont have an account</p>
+        </form>
+    </div>
+</body>
+</html>
+
+//2. Register Form
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: antiquewhite;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        form {
+            width: 350px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+        label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 5px;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+        input[type=text],
+        input[type=email],
+        input[type=password],
+        input[type=date],
+        input[type=file]{
+            width: 100%;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        input:focus {
+            background-color: lightskyblue;
+            outline: none;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 30px;
+            background: pink;
+            border-radius: 20px;
+            border: 1px solid black;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        button:hover {
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h2>REGISTER PAGE</h2>
+            <label>User Name:</label>
+            <input type="text" placeholder="Enter your name" required>
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email" required>
+            <label>Password:</label>
+            <input type="password" placeholder="Enter your password" required>
+            <label>Confirm Password:</label>
+            <input type="text" placeholder="Confirm Your Password" required>
+            <label>Date of Birth:</label>
+            <input type="date" placeholder="Enter your date of birth" required>
+            <label>Resume:</label>
+            <input type="file" placeholder="Attach your Resume" required>
+            <button type="submit">Register</button>
+            <p>Please login <a href="day5tasklogin.html">here</a> after creating an account</p>
+        </form>
+    </div>
+</body>
+</html>
+
+// 3.Login Successful
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body{
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <h3>LOGIN SUCCESSFUL!</h3>
+</body>
+</html>
