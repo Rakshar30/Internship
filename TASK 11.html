@@ -1,0 +1,217 @@
+// Creating a Product Card:
+// 1.Desiging A Card Container:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div.card{
+            width: 250px;
+            text-align: center;
+            background-image: linear-gradient(lightblue,pink,yellow);
+           border-radius: 20px;
+           box-shadow: 5px 5px 2px rgb(0, 255, 255);
+        }
+        div.header{
+            background-color: antiquewhite;
+            color: black;
+            padding: 10px;
+            font-size: 40px;
+        }
+        div.container{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+     <div class="card">
+        <div class="header">
+            <h1>1</h1>
+        </div>
+        <div class="container">
+            <p>january1,2026</p>
+        </div>
+    </div>
+</body>
+</html> 
+
+// 2.Designing A Card Heading:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div.card{
+            width: 250px;
+            text-align: center;
+            background-image: linear-gradient(lightblue,pink,yellow);
+           border-radius: 20px;
+           box-shadow: 5px 5px 2px rgb(0, 255, 255);
+        }
+        div.header{
+            background-color: antiquewhite;
+            color: black;
+            padding: 10px;
+            font-size: 40px;
+            text-shadow:5px 5px 7px rgb(205, 50, 159);
+            font-weight:bold;
+            writing-mode: vertical-rl;
+        }
+        div.container{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+     <div class="card">
+        <div class="header">
+            <h1>Calender</h1>
+        </div>
+        <div class="container">
+            <p>january1,2026</p>
+        </div>
+    </div>
+</body>
+</html>
+
+// 3. Designing A Description Text:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div.card{
+            width: 250px;
+            text-align: center;
+            background-image: linear-gradient(lightblue,pink,yellow);
+           border-radius: 20px;
+           box-shadow: 5px 5px 2px rgb(0, 255, 255);
+        }
+        div.header{
+            background-color: antiquewhite;
+            color: black;
+            padding: 10px;
+            font-size: 40px;
+            text-shadow:5px 5px 7px rgb(205, 50, 159);
+            font-weight:bold;
+            writing-mode: vertical-rl;
+        }
+        div.container{
+            padding: 10px;
+        }
+        div.description{
+            width: 200px;
+            height: 30px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+     <div class="card">
+        <div class="header">
+            <h1>Calender</h1>
+        </div>
+        <div class="container">
+            <p>january1,2026</p>
+        </div>
+        <div class="description">
+            this is simple description tag for the calender
+        </div>
+    </div>
+</body>
+</html> 
+
+// 4.Hovering Effect And Transform Effect:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+        div.card{
+            width: 250px;
+            text-align: center;
+            background-image: linear-gradient(lightblue,pink,yellow);
+           border-radius: 20px;
+           box-shadow: 5px 5px 2px rgb(0, 255, 255);
+           transition:width 2s ease-in;
+           transition-delay: 2s;
+        }
+        div.card:hover{
+            width: 300px;
+            background-color: brown;
+            /*transform: scale(1,2) rotate(7deg) translate(10px,5px) skew(5deg,5deg);*/
+            transform: rotateZ(30deg);
+        }
+        div.header{
+            background-color: antiquewhite;
+            color: black;
+            padding: 10px;
+            font-size: 40px;
+            text-shadow:5px 5px 7px rgb(205, 50, 159);
+            font-weight:bold;
+            writing-mode: vertical-rl;
+        }
+        div.container{
+            padding: 10px;
+        }
+        div.description{
+            width: 200px;
+            height: 30px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+     <div class="card">
+        <div class="header">
+            <h1>Calender</h1>
+        </div>
+        <div class="container">
+            <p>january1,2026</p>
+        </div>
+        <div class="description">
+            this is simple description tag for the calender
+        </div>
+    </div>
+</body>
+</html>
