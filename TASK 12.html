@@ -1,0 +1,133 @@
+// 1. Automatic Loading Animation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+    <style>
+        .loader{
+            width: 80px;
+            height: 80px;
+            border: 6px solid lightgray;
+            border-top: 6px solid blue;
+            border-radius: 50%;
+            animation:example 2s infinite;
+        }
+        @keyframes example {
+            from { 
+                transform: rotate(0deg); 
+            }
+            to   { 
+                transform: rotate(360deg); 
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="loader"></div>
+</body>
+</html>
+
+// 2. Change Display Type by Screen Size:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            background-color: rgb(73, 237, 36);
+        }
+        @media(max-width:600px){
+            span{
+                background-color: aqua;
+                 display: block;
+            }
+        }
+              @media(min-width:601px){
+            span{
+                background-color: aqua;
+                 display: inline;
+            }
+        }
+    </style>
+</head>
+<body>
+    <span>Span1</span>
+    <span>Span2</span>
+    <span>Span3</span>
+</body>
+</html>
+
+// 3. Hide Image on Mobile:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            border: 2px solid black;
+        }
+        @media (max-width: 600px) {
+            img {
+                display: none;
+            }
+        }
+        @media (min-width: 601px) {
+            img {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="image.jpg" alt="scenery" height="300px" width="700px">
+    <p>This is a Paragraph</p>
+</body>
+</html>
+
+// 4. Centered Layout With direction Change:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            height: 100vh;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: darkorange;
+            border: 2px solid black;
+        }
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+        @media (min-width: 601px) {
+            .container {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
