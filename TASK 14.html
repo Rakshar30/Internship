@@ -1,0 +1,131 @@
+// Basics Of JavaScript:
+// 1.Change Text using Button:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">This is paragraph</p>
+    <button type="button" onclick="document.getElementById('demo').innerHTML='Hello JavaScript'">Click Here</button>
+</body>
+</html>
+
+// 2.Change Text Color:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="heading">Welcome</h2>
+    <button type="button" onclick="document.getElementById('heading').style.color='blue'">Click Here</button>
+</body>
+</html>
+
+// 3.Change Background Color:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">This is box</div>
+    <button type="button" onclick="document.getElementById('box').style.backgroundColor='yellow'">Click Here</button>
+</body>
+</html>
+
+// 4.Change Image:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="document.getElementById('myImg').src='shirt1.jpg'">Click</button>
+    <img src="kids.jpg" id="myImg" style="width: 300px;">
+    <button onclick="document.getElementById('myImg').src='kids.jpg'">Click Here</button>
+</body>
+</html>
+
+// 5.Increase Font Size:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">Text here</p>
+    <button type="button" onclick="document.getElementById('para').style.fontSize='30px'">Click Here</button>
+</body>
+</html>
+
+// 6.Hide Text:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="hideText">Hide me</p>
+    <button type="button" onclick="document.getElementById('hideText').style.display='none'">Click Here</button>
+</body>
+</html>
+
+// 6.Show Hidden Text:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="hideText" style="display:none;">This is a paragraph to display</p>
+    <button type="button" onclick="document.getElementById('hideText').style.display='block'">Click</button>
+</body>
+</html>
+
+// 7.Printing console.log:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(10=="10");
+        console.log(10==="10");
+        console.log(null==undefined);
+        console.log(null===undefined);
+        let x=5;
+        console.log(x++);
+        console.log(x);
+        let y=5;
+        console.log(++y);
+        console.log(5>="5");
+        console.log(typeof(10=="10"));
+        console.log("10"*"2");
+        console.log("5"-2);
+        let age=18;
+        console.log(age>=18 && age<60);
+        console.log(true||false);
+        console.log(!true);
+    </script>   
+</body>
+</html>
