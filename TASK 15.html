@@ -1,0 +1,69 @@
+// 1.Array Methods In JavaScript:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits=["Apple","Banana","Mango"];
+        console.log(fruits);
+        fruits.push("Orange");
+        console.log(fruits);
+        fruits.pop();
+        console.log(fruits);
+        console.log(fruits.indexOf("Banana"));
+        console.log(fruits.length);
+    </script>
+</body>
+</html>
+
+// 2.Object Access In JavaScript:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student={name:"xyz",age:21,course:"BE"};
+        console.log(student)
+        console.log(student.name);
+        student.age=22;
+        console.log(student);
+        student.city="Mangalore";
+        console.log(student);
+        delete student.course;
+        console.log(student);
+    </script>
+</body>
+</html>
+
+// 3.Array Iterations In JavaScript:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=[1,2,3,4,5];
+        let result=num.map(n=>n**2);
+        console.log(result);
+
+        let num1=[1,2,3,4,5]
+        let result1=num1.filter(n=>n%2);
+        console.log(result1);
+
+        let num2=[1,2,3,4,5]
+        let sum=num2.reduce((total,n)=>total+n);
+        console.log(sum);
+    </script>
+</body>
+</html>
