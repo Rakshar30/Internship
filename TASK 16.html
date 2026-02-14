@@ -1,0 +1,149 @@
+// Events In JavaScript:
+// 1.Creating Two Buttons:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="increase">Increase</button>
+    <button id="decrease">Decrease</button>
+    <h2>Number: <span id="num">0</span></h2>
+    <script>
+        let count = 0;
+        document.getElementById("increase").addEventListener("click", function() {
+            count++;
+            document.getElementById("num").textContent = count;
+        });
+        document.getElementById("decrease").addEventListener("click", function() {
+            count--;
+            document.getElementById("num").textContent = count;
+        });
+    </script>
+</body>
+</html>
+
+// 2.Create A Dropdown With Light/Dark Options:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="theme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+    <script>
+        document.getElementById("theme").addEventListener("change", function () {
+            let mode = this.value;
+            if (mode === "light") {
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+            } else {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+            }
+        });
+    </script>
+</body>
+</html>
+
+// 3.Create A Form With Email Input:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myform">
+        <input type="email" id="name">
+        <button type="submit">submit</button>
+    </form>
+    <p id="message"></p>
+    <script>
+        document.getElementById("myform").addEventListener("submit", function(e) {
+            e.preventDefault();
+            let name = document.getElementById("name").value;
+            let msg = document.getElementById("message");
+            if (name === "") {
+                msg.innerHTML = "Email Required";
+            } else {
+                msg.innerHTML = "Email Saved";
+            }
+        });
+    </script>
+</body>
+</html>
+
+// 4.Create An Input Box:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name2">
+        <p id="p1"></p>
+    <script>
+        let input=document.getElementById('name2');
+        input.addEventListener("input",function(){
+            document.getElementById("p1").innerText="Charters typed:"+input.value.length;
+        })
+    </script>
+</body>
+</html>
+
+// 5.Create A Text:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="box" style="color:white;">This is paragraph</p>
+    <script>
+        let box=document.getElementById("box");
+        box.addEventListener("mouseover",function(){
+            box.style.color='green';
+        })
+        box.addEventListener("mouseout",function(){
+            box.style.color="black";
+        })
+        </script>
+</body>
+</html>
+
+// 7. String Methods:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let name="javascript";
+    console.log(name.toUpperCase());
+    let course="JavaScript";
+    console.log(course.length);
+    let word="Developer";
+    console.log(word.slice(0,4));
+    let sentence="Hello World"
+    console.log(sentence.replace('World','JavaScript'));
+    let email='test@gmail.com';
+    console.log(email.includes('word'));
+    </script>
+</body>
+</html>
