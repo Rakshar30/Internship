@@ -1,0 +1,167 @@
+// Examples Of For Loop And If-Else Conditions In JavaScript:
+// 1. Printing Numbers From 1 To 10:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h2>Printing Numbers</h2>
+    <p id="demo"></p>
+    <script>
+        let text="";
+        for (let i=1;i<=10;i++){
+            text+=" The Numbers are" + i + " <br> ";
+        }
+        document.getElementById("demo").innerHTML=text;
+    </script>
+</body>
+</html>
+
+// 2.Finding Sum Of Numbers:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h2>Sum of Numbers</h2>
+    <p id="demo"></p>
+    <script>
+        let n = 10;
+        let sum = 0;
+        for (let i = 1; i <= 50; i++) {
+            sum = sum + i;
+        }
+        document.getElementById("demo").innerHTML ="The sum of numbers from 1 to " + n + " is: " + sum;
+    </script>
+</body>
+</html>
+
+// 3.Counting Even Numbers:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h2>Even Numbers</h2>
+    <p id="demo"></p>
+    <script>
+        let count = 0;
+        for (let i = 1; i <= 50; i++) {
+            if (i % 2 === 0) {
+                count++;
+            }
+        }
+        document.getElementById("demo").innerHTML ="even numbers between 1 and 50 are: " + count;
+    </script>
+</body>
+</html>
+
+// 4.Check If A Number Is Positive, Negative Or Zero:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+    let n=5;
+    let greeting2;
+
+    if(n>0){
+        greeting2="positive number";
+    }else if(n<0){
+        greeting2="negative number";
+    }
+    else{
+        greeting2="zero"
+    }
+    document.getElementById("demo").innerHTML=greeting2;
+</script>
+</body>
+</html>
+
+// 5.Calculating The Grade:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>Grade Calculator</h2>
+<p id="demo"></p>
+<script>
+    let marks = 52;
+    let grade;
+    if (marks > 75) {
+        grade = "A Grade";
+    } else if (marks >= 60 && marks <= 75) {
+        grade = "B Grade";
+    } else {
+        grade = "C Grade";
+    }
+    document.getElementById("demo").innerHTML ="Grade: " + grade;
+</script>
+</body>
+</html>
+
+// 6.Stoping The Loop At First Negative Number:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="demo1"></p>
+<script>
+    let arr = [5, 10, 15, -2, 20];
+    let text = "";
+    for (let i = 0; i < 4; i++) {
+        if (arr[i] < 0) {
+            break; 
+        }
+        text += arr[i] + " ";
+    }
+    document.getElementById("demo1").innerHTML = text;
+</script>
+</body>
+</html>
+
+// 7.Print Only Odd Numbers Using Continue:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="demo2"></p>
+<script>
+    let numbers = [1, 2, 3, 4, 5, 6];
+    let result = "";
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 === 0) {
+            continue;
+        }
+        result += numbers[i] + " ";
+    }
+    document.getElementById("demo2").innerHTML = result;
+</script>
+</body>
+</html>
