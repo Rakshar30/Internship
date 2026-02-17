@@ -1,0 +1,124 @@
+// Error Handling Tasks (try, catch, finally, throw):
+// 1.Dividing Two Numbers with Error Handling:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+        function divide(a, b){
+            try{
+                if(b === 0){
+                    throw new Error("Cannot divide by zero");
+                }
+                console.log("Result:", a / b);
+            }
+            catch(error){
+                console.log(error.message);
+            }
+            finally{
+                console.log("Operation Completed");
+            }
+        }
+        divide(10, 2);  
+        divide(5, 0);    
+   </script>
+</body>
+</html>
+
+// 2.Checking If A Number Is Palindrome:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPalindrome(num){
+            let str=num.toString();     
+            let reversed=str.split("").reverse().join("");   
+            return str === reversed;    
+        }
+        console.log(isPalindrome(121));
+    </script>
+</body>
+</html>
+
+// 3.Swaping Two Numbers (Without Third Variable):
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 10;
+        let b = 20;
+        console.log("Before Swap:", a, b);
+        [a, b] = [b, a];
+        console.log("After Swap:", a, b);
+    </script>
+</body>
+</html>
+
+// 4.Removing Duplicates From String:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "aabbcc";
+        let result = "";
+        for(let char of str){
+            if(!result.includes(char)){
+                result += char;
+            }
+        }
+        console.log(result);  
+    </script>
+</body>
+</html>
+
+// 5.Checking If String Contains Only Numbers Using Regular Expression:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = "12345";
+        let pattern = /^[0-9]+$/;
+        console.log(pattern.test(num));  
+        </script>
+</body>
+</html>
+
+// 6.Finding All Vowels In String Using Regular Expression:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str="javascript";
+        let vowels = str.match(/[aeiou]/g);
+        console.log(vowels); 
+    </script>
+</body>
+</html>
