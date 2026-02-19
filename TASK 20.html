@@ -1,0 +1,149 @@
+// Creating a fully responsive E-Commerce Laptop Store Product Page using Bootstrap 5 that includes a featured laptop carousel, a product cards section, a categories list group, an order status progress bar, pagination for product pages, and a loading section with spinners:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<style>
+  .carousel-item img {
+      max-height: 450px;   
+      width: 100%;
+      object-fit: contain; 
+      background-color: #000; 
+  }
+  .card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+</style>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="laptop1.jpg" alt="gaming_laptop" class="d-block w-100">
+      <div class="carousel-caption">
+        <h3 >Gaming Laptop</h3>
+        <p>Gaming laptops with 16GB</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="laptop2.jpg" alt="asus_laptop" class="d-block w-100">
+      <div class="carousel-caption">
+        <h3 >Asus Laptop</h3>
+        <p>Asus Laptop with intel i5</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="laptop3.jpg" alt="apple_laptop" class="d-block w-100">
+      <div class="carousel-caption">
+        <h3>Apple Laptop</h3>
+        <p>Apple Laptop with 1TB</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+<!--------------------------------2)product cards section-->
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Latest Laptops</h2>
+    <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="laptop1.jpg" class="card-img-top" alt="Laptop 1">
+                <div class="card-body">
+                    <h5 class="card-title">Gaming Laptop</h5>
+                    <p class="card-text">Gaming laptops with 16GB.</p>
+                    <h6 class="text-success">₹75,000</h6>
+                    <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="laptop2.jpg" class="card-img-top" alt="Laptop 2">
+                <div class="card-body">
+                    <h5 class="card-title">Asus Laptop</h5>
+                    <p class="card-text">Asus Laptop with intel i5.</p>
+                    <h6 class="text-success">₹58,000</h6>
+                    <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="laptop3.jpg" class="card-img-top" alt="Laptop 3">
+                <div class="card-body">
+                    <h5 class="card-title">Apple Laptop</h5>
+                    <p class="card-text">Apple laptop with 1TB.</p>
+                    <h6 class="text-success">₹1,20,000</h6>
+                    <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------------------3)List group-categories-->
+<div class="container mt-5">
+    <h2 class="mb-3">Categories</h2>
+    <ul class="list-group">
+        <li class="list-group-item">Gaming Laptops</li>
+        <li class="list-group-item">Business Laptops</li>
+        <li class="list-group-item">Student Laptops</li>
+        <li class="list-group-item">Accessories</li>
+        <li class="list-group-item list-group-item-success">Special Offers</li>
+    </ul>
+</div>
+
+<!------------4)Progress bar-order status-->
+<div class="container mt-5">
+    <h2 class="mb-3">Order Status</h2>
+    <label class="mb-2 fw-bold">Order Shipped</label>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 70%;">70%</div>
+    </div>
+</div>
+
+<!------------------5)pagination-product pages-->
+<div class="container mt-5">
+    <h2 class="mb-3">Product Pages</h2>
+    <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+</div>
+
+<!-------------------6)spinner-loding section-->
+<div class="container mt-5 text-center">
+    <h2 class="mb-3">Loading Products...</h2>
+    <div class="spinner-border text-primary me-3"></div>
+    <div class="spinner-grow text-primary"></div>
+</div>
+</body>
+</html>
