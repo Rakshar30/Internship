@@ -1,0 +1,500 @@
+// Designing a responsive course website using Bootstrap 5. The website should include a fixed-top navbar with dropdown menus, a hero section, a carousel, tabbed content, course cards, an FAQ accordion, a contact form, and a footer with social media icons. You also want to implement offcanvas components for Quick Links and Notifications, each toggled by buttons in the navbar.
+// CODE:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+.hero {
+    padding-top: 140px;   
+    padding-bottom: 120px;
+    background-color: #f8f9fa;  
+}
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+}
+#alertContainer .alert {
+    font-size: 1rem;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+.carousel-wrapper {
+    max-width: 70%;
+    margin: auto;
+}
+.carousel-img {
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.caption-box {
+    background: rgba(0, 0, 0, 0.35);
+    padding: 8px 18px;
+    border-radius: 10px;
+    bottom: 20px;
+}
+.caption-box h5 {
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+.caption-box p {
+    font-size: 13px;
+    margin: 0;
+}
+@media (max-width: 992px) {
+    .carousel-wrapper {
+        max-width: 90%;
+    }
+}
+@media (max-width: 768px) {
+    .carousel-img {
+        height: 220px;
+    }
+}
+@media (max-width: 576px) {
+    .carousel-img {
+        height: 180px;
+    }
+}
+.caption-box {
+    background: rgba(0, 0, 0, 0.35);
+    padding: 8px 20px;
+    border-radius: 12px;
+    width: fit-content;
+    max-width: 70%;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 25px;
+}
+.caption-box h5 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+.caption-box p {
+    font-size: 13px;
+    margin: 0;
+}
+.carousel-img {
+    height: 320px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.course-card {
+    transition: all 0.3s ease-in-out;
+    border-radius: 12px;
+}
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 123, 255, 0.4);
+}
+</style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!---navbar-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top shadow">
+        <div class="container">
+            <a href="#" class="navbar-brand fw-bold">
+              <i class="bi bi-mortarboard-fill text-warning fs-4"></i>Courses  
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto align-items-center ">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#courses" class="nav-link">Courses</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#courses" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Categories</a>
+                        <ul class="dropdown-menu">
+                        <li><a href="#courses" class="dropdown-item">Web Development</a></li>
+                        <li><a href="#courses" class="dropdown-item">Full Stack Development</a></li>
+                        <li><a href="#courses" class="dropdown-item">AI/ML</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a href="#" class="dropdown-item text-danger fw-bold">New Launch</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+          <!-- Quick Links Button -->
+          <button class="btn btn-primary ms-3" data-bs-toggle="offcanvas" data-bs-target="#quicklinks">
+            Quick Links
+          </button>
+        </li>
+        <li class="nav-item">
+          <!-- Notifications Button -->
+          <button class="btn btn-warning ms-3 position-relative" data-bs-toggle="offcanvas" data-bs-target="#notifications">
+            <i class="bi bi-bell-fill"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <!--------hero section-->
+    <section id="home" class="hero d-flex align-items-center text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Upgrade your skills</h1>
+            <p class="lead mb-4">This is a course website where you can learn the course from expert traineers with hands-on experience</p>
+            <button class="btn btn-warning btn-lg px-4 py-2" data-bs-toggle="modal" data-bs-target="#registerModal">
+                <i class="bi bi-arrow-right-circle-fill me-2"></i>Register Now
+            </button>
+        </div>
+    </section>
+    <!---alert-->
+    <div class="container mt-4" id="alertContainer"></div>
+    <!--tabs-->
+   <div class="container my-5">
+    <ul class="nav nav-pills justify-content-center mb-4">
+        <li class="nav-item">
+            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab1">
+                <i class="bi bi-stars me-2"></i>Why choose us
+            </button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab2">
+                <i class="bi bi-award-fill me-2"></i>Certifications
+            </button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab3">
+                <i class="bi bi-briefcase-fill me-2"></i>Placements
+            </button>
+        </li>
+    </ul>
+    <!-- TAB CONTENT -->
+    <div class="tab-content text-center">
+        <!-- TAB 1 -->
+        <div class="tab-pane fade show active" id="tab1">
+            <h4 class="mb-3">Why choose Us?</h4>
+            <p class="lead">Industry expert trainers and real-time projects.</p>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-3 mb-3">
+                    <i class="bi bi-people-fill display-5 text-primary"></i>
+                    <p class="mt-2 fw-semibold">Expert Trainers</p>
+                </div>
+            </div>
+        </div>
+        <!-- TAB 2 -->
+        <div class="tab-pane fade" id="tab2">
+            <h4 class="mb-3">Certifications</h4>
+            <p class="lead">Get certificates approved by top companies.</p>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-3 mb-3">
+                    <i class="bi bi-shield-lock-fill display-5 text-success"></i>
+                    <p class="mt-2 fw-semibold">Secure & Verified</p>
+                </div>
+            </div>
+        </div>
+        <!-- TAB 3 -->
+        <div class="tab-pane fade" id="tab3">
+            <h4 class="mb-3">Placements</h4>
+            <p class="lead">Placement assistance & mock interviews.</p>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-3 mb-3">
+                    <i class="bi bi-person-workspace display-5 text-danger"></i>
+                    <p class="mt-2 fw-semibold">Interview Training</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-----carousel add any 3 images add previous and next icon-->
+    <div class="carousel-wrapper my-5">
+    <div id="courseCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#courseCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#courseCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#courseCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner rounded shadow-lg">
+       <div class="carousel-item active">
+                <img src="https://i.pinimg.com/1200x/52/61/98/526198892b4ba9e2ca0bf648c2724f42.jpg" class="d-block w-100 carousel-img">
+                <div class="carousel-caption caption-box">
+                    <h5>Certificates</h5>
+                    <p>Certificates approved by Google.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/75/bb/77/75bb7769b28f7fcf51769ce714e4ae8e.jpg" class="d-block w-100 carousel-img">
+                <div class="carousel-caption caption-box">
+                    <h5>Placements</h5>
+                    <p>Placement Assistance & Mock Interviews.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/49/40/e7/4940e78f82f1816f8c3d66fb4c0b617a.jpg" class="d-block w-100 carousel-img">
+                <div class="carousel-caption caption-box">
+                    <h5>Real-time Projects</h5>
+                    <p>Work on hands-on projects.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#courseCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#courseCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+    <!-----courses cards add 2 more cards with para and icon-->
+    <section id="courses" class="container my-5">
+        <h2 class="mb-4 text-capitalize">Popular Courses</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card shadow course-card h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-code-slash fs-1 text-primary"></i>
+                        <h5 class="card-title mt-3">Web Development</h5>
+                        <p class="text-muted">Learn the fundamentals of Web Development and also build your own projects.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Enroll</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+        <div class="col-md-4">
+            <div class="card shadow course-card h-100">
+                <div class="card-body text-center">
+                    <i class="bi bi-layers fs-1 text-success"></i>
+                    <h5 class="card-title mt-3">Full Stack Development</h5>
+                    <p class="text-muted">Learn both front-end and back-end.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                        Enroll
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4">
+            <div class="card shadow course-card h-100">
+                <div class="card-body text-center">
+                    <i class="bi bi-cpu fs-1 text-danger"></i>
+                    <h5 class="card-title mt-3">AI/ML</h5>
+                    <p class="text-muted">Learn AI/ML and be ready to crack data-engineer jobs.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                        Enroll
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!--frequently asked quesions-->
+    <div class="container my-5">
+    <h2 class="text-center fw-bold display-6 mb-4">
+        Frequently Asked Questions
+    </h2>
+    <div class="accordion" id="faq">
+        <!-- Q1 -->
+        <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fs-5 fw-semibold py-3"
+                        data-bs-toggle="collapse" data-bs-target="#q1">
+                    <i class="bi bi-patch-question-fill text-primary me-2 fs-4"></i>
+                    Do you provide certificates?
+                </button>
+            </h2>
+            <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body fs-6">
+                    Yes, certificates are provided after completing the course successfully.
+                </div>
+            </div>
+        </div>
+        <!-- Q2 -->
+        <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fs-5 fw-semibold py-3"
+                        data-bs-toggle="collapse" data-bs-target="#q2">
+                    <i class="bi bi-mortarboard-fill text-success me-2 fs-4"></i>
+                    Do you provide placement assistance?
+                </button>
+            </h2>
+            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body fs-6">
+                    Yes, we guide students with mock interviews, resume building, and job referrals.
+                </div>
+            </div>
+        </div>
+        <!-- Q3 -->
+        <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fs-5 fw-semibold py-3"
+                        data-bs-toggle="collapse" data-bs-target="#q3">
+                    <i class="bi bi-wifi-off text-danger me-2 fs-4"></i>
+                    Are the classes online or offline?
+                </button>
+            </h2>
+            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body fs-6">
+                    We provide both online and offline training based on your preference.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                
+    <!----contact-->
+<section class="container my-5">
+    <h2 class="text-center mb-4 fw-bold">Contact Us</h2>
+    <div class="row g-4 align-items-center">
+        <!-- Contact Form -->
+        <div class="col-md-6">
+            <form class="p-4 border rounded-3 shadow-sm">
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Name</label>
+                    <input type="text" class="form-control" placeholder="Enter your Name">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Email</label>
+                    <input type="email" class="form-control" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Message</label>
+                    <textarea class="form-control" rows="4" placeholder="Write your Queries"></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark w-100 py-2 fw-semibold">
+                    Send Message
+                </button>
+            </form>
+        </div>
+        <!-- Contact Info -->
+        <div class="col-md-6 text-center">
+            <div class="p-4 border rounded-3 shadow-sm">
+                <div class="mb-4">
+                    <i class="bi bi-geo-alt-fill text-primary fs-2"></i>
+                    <p class="mt-2 mb-0 fw-semibold">Address</p>
+                    <p class="text-muted">123,Mangalore</p>
+                </div>
+                <div class="mb-4">
+                    <i class="bi bi-telephone-fill text-success fs-2"></i>
+                    <p class="mt-2 mb-0 fw-semibold">Phone</p>
+                    <p class="text-muted">5897654821</p>
+                </div>
+                <div>
+                    <i class="bi bi-envelope-fill text-danger fs-2"></i>
+                    <p class="mt-2 mb-0 fw-semibold">Email</p>
+                    <p class="text-muted">abc@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!---footer you can add social media isons-->
+<footer class="bg-dark text-white mt-5 py-4">
+    <div class="container text-center">
+        <div class="mb-3 d-flex justify-content-center gap-4">
+            <a href="#" class="text-white fs-4">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="text-white fs-4">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="text-white fs-4">
+                <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="#" class="text-white fs-4">
+                <i class="bi bi-github"></i>
+            </a>
+        </div>
+        <!-- Footer Text -->
+        <p class="mb-0 fw-semibold">
+            © 2026|All Rights Reserved
+        </p>
+    </div>
+</footer>
+<!--modal-->
+<div class="modal fade" id="registerModal">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <form id="registerForm">
+                <!-- Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Course Registration</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- Body -->
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Select Course</label>
+                        <select class="form-control" required>
+                            <option value="">Select Course</option>
+                            <option>Web Development</option>
+                            <option>Full Stack Development</option>
+                            <option>AI/ML</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Footer -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary w-100">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!---offcampus-->
+<!-- Offcanvas Sidebar -->
+<!-- Quick Links Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="quicklinks">
+  <div class="offcanvas-header bg-primary text-white">
+    <h5 class="offcanvas-title" id="quickLinksLabel">Quick Links</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body p-0">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item list-group-item-action">Student Login</li>
+      <li class="list-group-item list-group-item-action">Assignments</li>
+      <li class="list-group-item list-group-item-action">Certificates</li>
+    </ul>
+  </div>
+</div>
+<script>
+    document.getElementById("registerForm").addEventListener("submit",function(e){
+        e.preventDefault();
+        document.getElementById("alertContainer").innerHTML=`
+        <div class="alert alert-success alert-dismissible fade show shadow-sm border-0 text-center mt-2" role="alert">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            Registration Successfull!
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+            `;
+            const modalElement = document.getElementById('registerModal');
+            const modal = bootstrap.Modal.getInstance(modalElement);
+            modal.hide();
+            document.getElementById("registerForm").reset();
+});
+</script>
+<!-- Notifications Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="notifications">
+  <div class="offcanvas-header bg-warning text-dark">
+    <h5 class="offcanvas-title">Notifications</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>Your notifications will appear here.</p>
+  </div>
+</div>
+</body>
+</html>
