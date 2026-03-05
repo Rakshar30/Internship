@@ -1,0 +1,18 @@
+.App{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: #121619;
+  color: white;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+body.light-mode {
+  background-color: white;
+  color: black;
+}

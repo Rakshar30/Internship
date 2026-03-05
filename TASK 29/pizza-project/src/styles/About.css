@@ -1,0 +1,45 @@
+.about {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutTop {
+  width: 100%;
+  height: 45vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.aboutBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+}
+
+.aboutBottom p {
+  max-width: 900px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.about .aboutBottom h1 {
+  font-weight: 500;
+  font-size: 60px;
+  color: black;
+  margin-bottom: 20px;
+}
+.aboutBottom h1::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #ff6b00;
+  display: block;
+  margin: 10px auto;
+}

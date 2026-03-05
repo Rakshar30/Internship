@@ -1,0 +1,39 @@
+.footer {
+  width: 100%;
+  height: 200px;
+  background-color: #121619;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+  color: white;
+}
+
+.socialMedia svg {
+  color: white;
+  margin: 20px;
+  font-size: 70px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.socialMedia svg:hover {
+  transform: translateY(-10px); 
+  color: #ff6b00; 
+}
+
+.footer p {
+  color: white;
+}
+body.light-mode .footer {
+  background-color: #121619;
+}
+
+body.light-mode .footer p {
+  color: white;
+}
+
+body.light-mode .socialMedia svg {
+  color: white;
+}
